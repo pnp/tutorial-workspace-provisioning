@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/07/ProvisioningSchema">
+  <pnp:Preferences Author="Franck Cornu" Version="1.0" Generator="Human being :-)">
+    <pnp:Parameters>
+      <pnp:Parameter Key="defaultCategory" Required="true"/>
+    </pnp:Parameters>
+  </pnp:Preferences>
+  <pnp:Localizations>
+    <pnp:Localization LCID="1033" Name="English" ResourceFile="pnp-workspace-en-us.resx"/>
+    <pnp:Localization LCID="1036" Name="French" ResourceFile="pnp-workspace-fr-fr.resx"/>
+  </pnp:Localizations>
+  <pnp:Templates ID="PNP-WORKSPACE-TEMPLATES">
+    <pnp:ProvisioningTemplate ID="PNP-GENERIC-WORKSPACE-TEMPLATE" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+    <pnp:Features> 
+      <pnp:SiteFeatures> 
+        <pnp:Feature ID="73ef14b1-13a9-416b-a9b5-ececa2b0604c" Description="Taxonomy feature" /> 
+        <pnp:Feature ID="8a4b8de2-6fd8-41e9-923c-c7c3c00f8295" Description="Open documents in client applications" />         
+      </pnp:SiteFeatures> 
+    </pnp:Features>
+    <pnp:SiteFields>
+      <Field Type="Note" DisplayName="pnpCategory_0" StaticName="jabb34c1237d4636b94d52f106dd791c" Name="jabb34c1237d4636b94d52f106dd791c" ID="{f7096ba6-966b-499d-86d2-df3816b6f07b}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{d2ad6fef-171f-49a9-b1a5-f93b2058a501}" />
+      <Field Type="Note" DisplayName="pnpDocumentType_0" StaticName="cb059806b09c409ba5357d418f7cbda4" Name="cb059806b09c409ba5357d418f7cbda4" ID="{27370b5b-0775-49a6-a3b2-26c20bcd51ee}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{d2ad6fef-171f-49a9-b1a5-f93b2058a501}" />
+      <Field Type="TaxonomyFieldType" DisplayName="{resource:pnpDocumentTypeColumnName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="_pnp" ID="{cb059806-b09c-409b-a535-7d418f7cbda4}" SourceID="{{siteid}}" StaticName="pnpDocumentType" Name="pnpDocumentType">
+        <Default>
+        </Default>
+        <Customization>
+          <ArrayOfProperty>
+            <Property>
+              <Name>SspId</Name>
+              <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+            </Property>
+            <Property>
+              <Name>GroupId</Name>
+            </Property>
+            <Property>
+              <Name>TermSetId</Name>
+              <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:pnp:Document Type}</Value>
+            </Property>
+            <Property>
+              <Name>AnchorId</Name>
+              <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>UserCreated</Name>
+              <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>Open</Name>
+              <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>TextField</Name>
+              <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{27370b5b-0775-49a6-a3b2-26c20bcd51ee}</Value>
+            </Property>
+            <Property>
+              <Name>IsPathRendered</Name>
+              <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>IsKeyword</Name>
+              <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>TargetTemplate</Name>
+            </Property>
+            <Property>
+              <Name>CreateValuesInEditForm</Name>
+              <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>FilterAssemblyStrongName</Name>
+              <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+            </Property>
+            <Property>
+              <Name>FilterClassName</Name>
+              <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+            </Property>
+            <Property>
+              <Name>FilterMethodName</Name>
+              <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+            </Property>
+            <Property>
+              <Name>FilterJavascriptProperty</Name>
+              <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+            </Property>
+          </ArrayOfProperty>
+        </Customization>
+      </Field>
+      <Field Type="TaxonomyFieldTypeMulti" DisplayName="{resource:pnpCategoryColumnName}" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Mult="TRUE" Sortable="FALSE" Group="_pnp" ID="{3abb34c1-237d-4636-b94d-52f106dd791c}" SourceID="{{siteid}}" StaticName="pnpCategory" Name="pnpCategory">
+        <Default>{parameter:defaultCategory}</Default>
+        <Customization>
+          <ArrayOfProperty>
+            <Property>
+              <Name>SspId</Name>
+              <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+            </Property>
+            <Property>
+              <Name>GroupId</Name>
+            </Property>
+            <Property>
+              <Name>TermSetId</Name>
+              <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:pnp:Category}</Value>
+            </Property>
+            <Property>
+              <Name>AnchorId</Name>
+              <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+            </Property>
+            <Property>
+              <Name>UserCreated</Name>
+              <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>Open</Name>
+              <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>TextField</Name>
+              <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{f7096ba6-966b-499d-86d2-df3816b6f07b}</Value>
+            </Property>
+            <Property>
+              <Name>IsPathRendered</Name>
+              <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>IsKeyword</Name>
+              <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>TargetTemplate</Name>
+            </Property>
+            <Property>
+              <Name>CreateValuesInEditForm</Name>
+              <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+            </Property>
+            <Property>
+              <Name>FilterAssemblyStrongName</Name>
+              <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+            </Property>
+            <Property>
+              <Name>FilterClassName</Name>
+              <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+            </Property>
+            <Property>
+              <Name>FilterMethodName</Name>
+              <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+            </Property>
+            <Property>
+              <Name>FilterJavascriptProperty</Name>
+              <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+            </Property>
+          </ArrayOfProperty>
+        </Customization>
+      </Field>
+    </pnp:SiteFields>
+    <pnp:ContentTypes>
+      <pnp:ContentType ID="0x010100053E552A8E1C3A4F92CD94DC96F4F04F" Name="{resource:pnpDocumentContentTypeName}" Group="_pnp" >
+        <pnp:FieldRefs>
+          <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" />
+          <pnp:FieldRef ID="5f47e085-2150-41dc-b661-442f3027f552" Name="SelectFilename" />
+          <pnp:FieldRef ID="8553196d-ec8d-4564-9861-3dbe931050c8" Name="FileLeafRef" Required="true" />
+          <pnp:FieldRef ID="8c06beca-0777-48f7-91c7-6da68bc07b69" Name="Created" Hidden="true" />
+          <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" />
+          <pnp:FieldRef ID="28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f" Name="Modified" Hidden="true" />
+          <pnp:FieldRef ID="822c78e3-1ea9-4943-b449-57863ad33ca9" Name="Modified_x0020_By" />
+          <pnp:FieldRef ID="4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb" Name="Created_x0020_By" />
+          <pnp:FieldRef ID="f7096ba6-966b-499d-86d2-df3816b6f07b" Name="jabb34c1237d4636b94d52f106dd791c" Hidden="true" />
+          <pnp:FieldRef ID="3abb34c1-237d-4636-b94d-52f106dd791c" Name="pnpCategory" Required="true" />
+          <pnp:FieldRef ID="27370b5b-0775-49a6-a3b2-26c20bcd51ee" Name="cb059806b09c409ba5357d418f7cbda4" Hidden="true" />
+          <pnp:FieldRef ID="cb059806-b09c-409b-a535-7d418f7cbda4" Name="pnpDocumentType" Required="true"/>
+        </pnp:FieldRefs>
+      </pnp:ContentType>
+    </pnp:ContentTypes>
+    <pnp:Lists>
+      <pnp:ListInstance Title="Documents" Description="" DocumentTemplate="{site}/Shared Documents/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="Shared Documents" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" ContentTypesEnabled="true" EnableAttachments="false" ListExperience="NewExperience" DefaultDisplayFormUrl="{site}/Shared Documents/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/Shared Documents/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/Shared Documents/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ContentTypeBindings>
+          <pnp:ContentTypeBinding ContentTypeID="0x010100053E552A8E1C3A4F92CD94DC96F4F04F" Default="true" />
+          <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+        </pnp:ContentTypeBindings>
+        <pnp:Views>
+          <View Name="{08FD4042-A197-46C7-B57D-E1D2CF95E79D}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="{resource:allDocumentsViewname}" Url="{site}/Shared Documents/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=45">
+            <Query>
+              <OrderBy>
+                <FieldRef Name="FileLeafRef" />
+              </OrderBy>
+            </Query>
+            <ViewFields>
+              <FieldRef Name="DocIcon" />
+              <FieldRef Name="LinkFilename" />
+              <FieldRef Name="Modified" />
+              <FieldRef Name="Editor" />
+              <FieldRef Name="pnpCategory" />
+              <FieldRef Name="pnpDocumentType" />
+            </ViewFields>
+            <RowLimit Paged="TRUE">30</RowLimit>
+            <JSLink>clienttemplates.js</JSLink>
+            <CustomFormatter />
+          </View>
+        </pnp:Views>
+        <pnp:FieldRefs>
+          <pnp:FieldRef ID="27370b5b-0775-49a6-a3b2-26c20bcd51ee" Name="cb059806b09c409ba5357d418f7cbda4" Hidden="true" DisplayName="pnpDocumentType_0" />
+          <pnp:FieldRef ID="f7096ba6-966b-499d-86d2-df3816b6f07b" Name="jabb34c1237d4636b94d52f106dd791c" Hidden="true" DisplayName="pnpCategory_0" />
+          <pnp:FieldRef ID="3abb34c1-237d-4636-b94d-52f106dd791c" Name="pnpCategory" DisplayName="{resource:pnpCategoryColumnName}" />
+          <pnp:FieldRef ID="cb059806-b09c-409b-a535-7d418f7cbda4" Name="pnpDocumentType" DisplayName="{resource:pnpDocumentTypeColumnName}" />
+        </pnp:FieldRefs>
+      </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=45" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+        <pnp:ContentTypeBindings>
+          <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118" Default="true" />
+          <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+        </pnp:ContentTypeBindings>
+        <pnp:Views>
+        <View Name="{1DCC5E07-2AE8-4368-A52E-5B8EEE3D5B59}" Type="HTML" DisplayName="{resource:allPagesViewName}" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=45">
+            <Query>
+              <OrderBy>
+                <FieldRef Name="Modified" Ascending="FALSE" />
+              </OrderBy>
+            </Query>
+            <ViewFields>
+              <FieldRef Name="DocIcon" />
+              <FieldRef Name="LinkFilename" />
+              <FieldRef Name="Editor" />
+              <FieldRef Name="Modified" />
+              <FieldRef Name="Author" />
+              <FieldRef Name="Created" />
+              <FieldRef Name="pnpCategory" />
+              <FieldRef Name="pnpDocumentType" />
+            </ViewFields>
+            <RowLimit Paged="TRUE">30</RowLimit>
+            <JSLink>clienttemplates.js</JSLink>
+            <CustomFormatter />
+          </View>
+        </pnp:Views>
+        <pnp:FieldRefs>
+          <pnp:FieldRef ID="27370b5b-0775-49a6-a3b2-26c20bcd51ee" Name="cb059806b09c409ba5357d418f7cbda4" Hidden="true" DisplayName="pnpDocumentType_0" />
+          <pnp:FieldRef ID="f7096ba6-966b-499d-86d2-df3816b6f07b" Name="jabb34c1237d4636b94d52f106dd791c" Hidden="true" DisplayName="pnpCategory_0" />
+          <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" DisplayName="Authoring Canvas Content" />
+          <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" DisplayName="Banner Image URL" />
+          <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" DisplayName="Description" />
+          <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" DisplayName="Promoted State" />
+          <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" DisplayName="First Published Date" />
+          <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" DisplayName="Page Layout Content" />
+          <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" DisplayName="Author Byline" />
+          <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" DisplayName="Topic header" />
+          <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" DisplayName="Site Page Flags" />
+          <pnp:FieldRef ID="3abb34c1-237d-4636-b94d-52f106dd791c" Name="pnpCategory" DisplayName="{resource:pnpCategoryColumnName}" />
+          <pnp:FieldRef ID="cb059806-b09c-409b-a535-7d418f7cbda4" Name="pnpDocumentType" DisplayName="{resource:pnpDocumentTypeColumnName}" />
+        </pnp:FieldRefs>
+      </pnp:ListInstance>
+    </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

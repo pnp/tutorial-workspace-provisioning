@@ -1,0 +1,36 @@
+[
+    {
+        "resourceAppId": "00000003-0000-0000-c000-000000000000",
+        "resourceAccess": [
+            {
+                "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                "type": "Scope"
+            },
+            {
+                "id": "19dbc75e-c2e2-444c-a770-ec69d8559fc7",
+                "type": "Role"
+            },
+            {
+                "id": "62a82d76-70ea-41e2-9197-370581804d09",
+                "type": "Role"
+            },
+            {
+                "id": "a82116e5-55eb-4c41-a434-62fe8a61c773",
+                "type": "Role"
+            },
+            {
+                "id": "332a536c-c7ef-4017-ab91-336970924f0d",
+                "type": "Role"
+            }
+        ]
+    },
+    {
+        "resourceAppId": "00000003-0000-0ff1-ce00-000000000000",
+        "resourceAccess": [
+            {
+                "id": "678536fe-1083-478a-9c59-b99265e6b0d3",
+                "type": "Role"
+            }
+        ]
+    }
+]
