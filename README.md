@@ -1,5 +1,10 @@
 # Tutorial - Create an end-to-end Office 365 groups provisioning solution #
 
+## Authors
+
+- Vincent Biret -[@baywet](https://twitter.com/baywet)
+- Franck Cornu - [@FranckCornu](https://twitter.com/FranckCornu)
+
 ## Why a provisiong solution for Office 365 groups?
 
 This solution was first designed to avoid SharePoint sites sprawling resulting of an uncontrolled Teams deployment inside an organisation. By 'uncontrolled' we mainly refer to Teams containing organisation reference or critical documents without any kind structure or metadata making hard for users to find them outside this specific Teams (data isolation).
