@@ -1,0 +1,23 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "NODE_OPTIONS": "--inspect=5858",
+    "appId": "3515c8ac-84fe-4ba3-acb7-b3da319ddd64",
+    "tenant": "aequosdev.onmicrosoft.com",
+    "resource": "https://aequosdev.sharepoint.com",
+    "certificateThumbPrint": "81F2732C4C9CE9BFD8029849D7DCDC66AD2F1711",
+    "certificatePath": ".\\config\\key.pem",
+    "spListId": "291cd922-e15d-4d20-bd80-2505f496962c",
+    "spWebUrl": "https://aequosdev.sharepoint.com/sites/workspaces",
+    "webhookSubscriptionIdentifier": "pnp-workspace-provisioning",
+    "webhookNotificationUrl": "http://68f556ec.ngrok.io/api/webhookhandler",
+    "webhookTargetEndpointUrl": "https://prod-14.canadaeast.logic.azure.com:443/workflows/8522bae5fd604377ba2fc99061f97d23/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Ciib3Yd0BE8HXxhNCoxKi7voXazHUn_z6LMXCOTtKic",
+    "azStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=aequosdevo365storage;AccountKey=jSGe2XzvTgoAoHL6xQZBX6s9it2Gg5eohw4g0t3ni19emnQFGz1+alUcp8pu93LRdLFboXaObkvGw9EAGAaF6Q==;EndpointSuffix=core.windows.net",
+    "azTableName": "WebhookStateTable"
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  }
+}
