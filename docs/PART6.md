@@ -13,7 +13,7 @@ Because function apps cannot be collocated if they are built with different lang
 
     Note: Azure CLI script for reference
     ```bash
-    az functionapp create -g mwcp19practice --consumption-plan-location canadaeast -n mwcp19practicedotnet --storage-account  mwcp19practice --runtime node
+    az functionapp create -g pnptutorialpractice --consumption-plan-location canadaeast -n pnptutorialpracticedotnet --storage-account  pnptutorialpractice --runtime node
     ```
 1. Build the function app project
     From the `functions/teams-config-function` folder run the following commands
@@ -29,22 +29,22 @@ Because function apps cannot be collocated if they are built with different lang
     ```
 1. Deploy the function app
     ```bash
-    az functionapp deployment source config-zip -g mwcp19practice -n mwcp19practicedotnet --src ./publish.zip
+    az functionapp deployment source config-zip -g pnptutorialpractice -n pnptutorialpracticedotnet --src ./publish.zip
     ```
 1. Configuring the function app
     ```bash
-    az functionapp config appsettings set -n mwcp19practicedotnet -g mwcp19practice --settings "TENANT_NAME=baywet" # the tenant in tenant.onmicrosoft.com
-    az functionapp config appsettings set -n mwcp19practicedotnet -g mwcp19practice --settings "LIBRARIES=Shared Documents" #the names of the libraries you want to create tabs for, comma separated
-    az functionapp config appsettings set -n mwcp19practicedotnet -g mwcp19practice --settings "LIBRARIES_SOURCE=https://baywet.sharepoint.com" #the url of the site collection you want the function to create teams tab for
-    az functionapp config appsettings set -n mwcp19practicedotnet -g mwcp19practice --settings "WEBSITE_LOAD_CERTIFICATES=*" #this instructs the function app to load certificates available in the resource group
-    az functionapp config appsettings set -n mwcp19practicedotnet -g mwcp19practice --settings "AUTH_CLIENT_SECRET_CERTIFICATE_THUMBPRINT=11E4A4AD3F71D40602CA7D98FD6F7E4B55E048CB" #certificate thumbprint to use for authentication, you can get this information from the app registration, certificates
-    az webapp auth update -g mwcp19practice -n mwcp19practicedotnet --action AllowAnonymous --aad-token-issuer-url "https://sts.windows.net/bd4c6c31-c49c-4ab6-a0aa-742e07c20232/" --aad-client-id "771365a9-d7c2-4731-98fc-bb8a4e11b873" --query "clientSecretCertificateThumbprint"
+    az functionapp config appsettings set -n pnptutorialpracticedotnet -g pnptutorialpractice --settings "TENANT_NAME=baywet" # the tenant in tenant.onmicrosoft.com
+    az functionapp config appsettings set -n pnptutorialpracticedotnet -g pnptutorialpractice --settings "LIBRARIES=Shared Documents" #the names of the libraries you want to create tabs for, comma separated
+    az functionapp config appsettings set -n pnptutorialpracticedotnet -g pnptutorialpractice --settings "LIBRARIES_SOURCE=https://baywet.sharepoint.com" #the url of the site collection you want the function to create teams tab for
+    az functionapp config appsettings set -n pnptutorialpracticedotnet -g pnptutorialpractice --settings "WEBSITE_LOAD_CERTIFICATES=*" #this instructs the function app to load certificates available in the resource group
+    az functionapp config appsettings set -n pnptutorialpracticedotnet -g pnptutorialpractice --settings "AUTH_CLIENT_SECRET_CERTIFICATE_THUMBPRINT=11E4A4AD3F71D40602CA7D98FD6F7E4B55E048CB" #certificate thumbprint to use for authentication, you can get this information from the app registration, certificates
+    az webapp auth update -g pnptutorialpractice -n pnptutorialpracticedotnet --action AllowAnonymous --aad-token-issuer-url "https://sts.windows.net/bd4c6c31-c49c-4ab6-a0aa-742e07c20232/" --aad-client-id "771365a9-d7c2-4731-98fc-bb8a4e11b873" --query "clientSecretCertificateThumbprint"
     # aad-token-issuer-url: tenant issuer to validate tokens from, make sure you replace the tenant id which you can get from the app registration ovrview page
     # aad-client-id: client id of the application, you can get this from the app registration overview page
     ```
 1. Upload the certificate
     ```bash
-    az webapp config ssl upload -n mwcp19practicedotnet -g mwcp19practice --certificate-file <pathToPfx> --certificate-password <pfxPassword>
+    az webapp config ssl upload -n pnptutorialpracticedotnet -g pnptutorialpractice --certificate-file <pathToPfx> --certificate-password <pfxPassword>
     ```
 ## Update the logic app
 1. Edit the logic app previously created.

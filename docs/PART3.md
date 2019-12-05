@@ -49,7 +49,7 @@ The part 3 demonstrates how to create and register a SharePoint webhook to catch
 
     Note: Azure CLI script to create the table storage
     ```bash
-    az storage table create --name WebhookStateTable --account-name mwcp19practice
+    az storage table create --name WebhookStateTable --account-name pnptutorialpractice
     ```
 
 ## Debug you function locally
@@ -82,7 +82,7 @@ Now we have a working function in localhost ,we likely want to deploy to Azure.
 
     Note: Azure CLI script to create the function app
     ```bash
-    az functionapp create --resource-group mwcp19practice --consumption-plan-location canadaeast --name mwcp19practice --storage-account  mwcp19practice --runtime node
+    az functionapp create --resource-group pnptutorialpractice --consumption-plan-location canadaeast --name pnptutorialpractice --storage-account  pnptutorialpractice --runtime node
     ```
 
 1. In VSCode, download the [Azure Function](https://code.visualstudio.com/tutorials/functions-extension/getting-started) extension.
@@ -98,7 +98,7 @@ Now we have a working function in localhost ,we likely want to deploy to Azure.
 
     Note: Azure functions SDK command to deploy the app
     ```bash
-    func azure functionapp publish mwcp19practice --publish-local-settings -i --overwrite-settings -y
+    func azure functionapp publish pnptutorialpractice --publish-local-settings -i --overwrite-settings -y
     ```
 
 1. Check the deployment by browsing the function in the Azure portal:

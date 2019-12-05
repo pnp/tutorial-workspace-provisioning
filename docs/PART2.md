@@ -11,8 +11,8 @@ The part 2 focuses and the Azure back-end services and provisioning assets. This
 1. Create a new storage account.  
     Note: _Azure CLI_ commands for reference
     ```bash
-    az group create --location "Canada East" --name "MWCP19Practice"
-    az storage account create --name mwcp19practice --resource-group "MWCP19Practice" --location "Canada East" --sku Standard_LRS --kind StorageV2
+    az group create --location "Canada East" --name "pnptutorialPractice"
+    az storage account create --name pnptutorialpractice --resource-group "pnptutorialPractice" --location "Canada East" --sku Standard_LRS --kind StorageV2
     ```
 1. Create a new File Share named '_templates_'.
 
@@ -20,13 +20,13 @@ The part 2 focuses and the Azure back-end services and provisioning assets. This
 
     Note: _Azure CLI_ commands for reference
     ```bash
-    az storage share create --name templates --quota 1 --account-name mwcp19practice
+    az storage share create --name templates --quota 1 --account-name pnptutorialpractice
     ```
 
 1. Upload the PnP template .xml file `workspace-template.xml`.  
     Note: _Azure CLI_ commands for reference
     ```bash
-    az storage file upload --account-name mwcp19practice --share-name "templates" --source ./templates/workspace-template.xml --path workspace-template.xml
+    az storage file upload --account-name pnptutorialpractice --share-name "templates" --source ./templates/workspace-template.xml --path workspace-template.xml
     ```
 
 1. Create a new directory named `resources` and upload the _.resx_ files from the local resource files.
@@ -34,9 +34,9 @@ The part 2 focuses and the Azure back-end services and provisioning assets. This
     ![Upload PnP template](../images/upload_template.png)  
     Note: _Azure CLI_ commands for reference
     ```bash
-    az storage directory create --account-name mwcp19practice --share-name templates --name resources
-    az storage file upload --account-name mwcp19practice --share-name "templates" --source ./templates/resources/pnp-workspace-en-us.resx --path resources/pnp-workspace-en-us.resx
-    az storage file upload --account-name mwcp19practice --share-name "templates" --source ./templates/resources/pnp-workspace-fr-fr.resx --path resources/pnp-workspace-fr-fr.resx
+    az storage directory create --account-name pnptutorialpractice --share-name templates --name resources
+    az storage file upload --account-name pnptutorialpractice --share-name "templates" --source ./templates/resources/pnp-workspace-en-us.resx --path resources/pnp-workspace-en-us.resx
+    az storage file upload --account-name pnptutorialpractice --share-name "templates" --source ./templates/resources/pnp-workspace-fr-fr.resx --path resources/pnp-workspace-fr-fr.resx
     ```
 
 ### Automation account
