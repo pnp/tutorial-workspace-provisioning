@@ -36,4 +36,4 @@ The part 5 demonstrates how to setup a search experience based on workspaces met
 8. Now you have a dedicated search page to browse provisioned Office 365 groups using taxonomy!
 
  
-> Next part: [Part 5 - Setup Teams Configuration](./PART6.md)
+> Next part: [Part 6 - Setup Teams Configuration](./PART6.md)

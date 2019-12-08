@@ -62,3 +62,5 @@ Sometimes, issues can occur for dummy reasons (timeout, service unavailable at t
 
     ![Start Flow](/images/start_flow.png)
 
+
+> Next part: [Part 5 - Setup end-user experience](./PART5.md)

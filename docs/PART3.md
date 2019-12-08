@@ -52,7 +52,7 @@ The part 3 demonstrates how to create and register a SharePoint webhook to catch
     az storage table create --name WebhookStateTable --account-name pnptutorialpractice
     ```
 
-## Debug you function locally
+## Debug your function locally
 
 1. In a Node.js console, build the solution using `npm run build:dev`
 
