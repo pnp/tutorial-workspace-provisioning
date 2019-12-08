@@ -22,6 +22,10 @@ Here are the covered topics during this tutorial:
 - Create and use SharePoint web hooks.
 - Create a SharePoint search experience for created groups.
 
+### Technical architecture
+
+![Architecture](./images/architecture.png)
+
 ## Prerequisites
 
 - A subscription to [Office 365 developer tenant](https://developer.microsoft.com/en-us/office/dev-program)
