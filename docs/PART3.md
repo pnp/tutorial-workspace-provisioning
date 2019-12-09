@@ -58,7 +58,7 @@ The part 3 demonstrates how to create and register a SharePoint webhook to catch
 
 1. In a Node.js console, from the `./dist` folder, run the following command `func start`.
 
-1. Install `npm i -g ngork` and type the following command: `ngrok http 7071`. This way SharePoint will be able to reply to your local function via the ngrok proxy.
+1. Install `npm i -g ngrok` and type the following command: `ngrok http 7071`. This way SharePoint will be able to reply to your local function via the ngrok proxy.
 
     ![Ngrok](../images/ngrok.png)
 
