@@ -67,6 +67,12 @@ The part 3 demonstrates how to create and register a SharePoint webhook to catch
 1. Open Postman, and send an empty POST query to the URL `http://<you_ngrok_url>/api/newworkspace`. It will register the webhook for the first time according to the local settings. The function should return `200` meaning the subscription has been created
 
     If you try to run it again, the subscription process will be skipped.
+    
+    Alternatively you can use the following PowerShell script instead of Postman to register the WebHook, make sure you update the urls before running the script.
+    ```PowerShell
+    Connect-PnPOnline -Url https://aequosdev.sharepoint.com/sites/workspaces2 -UseWebLogin
+    Add-PnPWebhookSubscription -List "Workspace requests" -NotificationUrl https://8b2fe87f.ngrok.io/api/webhookhandler
+    ```
 
 1. Put a debug breakpoint in your code and try to add a new item in the workspace requests list to ensure the webhook is triggered correctly.
 
