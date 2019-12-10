@@ -35,7 +35,7 @@ Here are the covered topics during this tutorial:
 - Office 365
     - Create term groups and term sets
     - Create site collections
-- [Node.js 10](https://nodejs.org/dist/latest-v10.x/)
+- [Node.js 10](https://nodejs.org/dist/latest-v10.x/) (**not latest**)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Postman](https://www.getpostman.com/)
 - A modern browser (pick one)
@@ -49,7 +49,7 @@ Here are the covered topics during this tutorial:
 - [SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) + [PnP PowerShell for SharePoint Online](https://github.com/SharePoint/PnP-PowerShell/releases)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [Dot Net Core SDK 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) (installer version)
-- (Optional) Azure Functions Core tools 2.X : `npm i -g azure-functions-core-tools@2.X`
+- (Optional) Azure Functions Core tools 2.X : `npm i -g azure-functions-core-tools@2.7.1149`
 
 ## Tutorial steps
 
