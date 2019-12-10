@@ -64,7 +64,7 @@ The part 2 focuses and the Azure back-end services and provisioning assets. This
     | `spTenantUrl` | The URL of the SharePoint adminsitartion site | No |Ex: `https://<your_tenant>-admin.sharepoint.com`
     | `appId` | The Azure AD application client ID | No | ![Azure AD app client ID](../images/azure_ad_clientid.png)
     | `appSecret` | The Azure AD application cient secret | Yes | ![Azure AD app secret](../images/new_secret.png)
-    | `aadDomain` | The Azure AD domain | No | ex: `mydomain.com` or `mycompany.onmicrosoft.com`
+    | `aadDomain` | The Azure AD domain | No | ex: `mydomain.com` or `mycompany.onmicrosoft.com` (**without 'http://'**)
 
 1. Create a new runbook called **New-Workspace** and copy/paste the content of the `New-Workspace.ps1` script. Save and **Publish** the file.
 
@@ -76,17 +76,16 @@ The part 2 focuses and the Azure back-end services and provisioning assets. This
 
 | # | Step | Visual 
 | -- | ----- | ------ |
-| 1  |Create a HTTP request trigger using the following payload JSON sample to generate th schema.| ![Trigger](../images/logicapp_trigger.png) |
+| 1  |Create a HTTP request trigger using the following payload JSON sample to generate th schema (see note below).| ![Trigger](../images/logicapp_trigger.png) |
 | 2  | Get current SharePoint item properties.| ![Step 1](../images/logicapp_step1.png) |
 | 3  | Set the provisioning status in the requests list. |  ![Step 2](../images/logicapp_step2.png) |
-| 4  | Create an Azure Automation job using the provisioning runbook. Because the members and categories columns in the requests list are multi values, you will have to use `concat(body('Get_item')?['<columnName>'])` expression in associated parameters. To do so, select first the `concat()` operator and then in parenthesis, select the `Members` or `Category` fields from the output of the step #2 according to the runbook parameter. This will replace the expression with the internal name of the fields. Also make sure you wait for the job to finish. | ![Step 3](../images/logicapp_step3.png) |
+| 4  | Create an Azure Automation job using the provisioning runbook and select the **'New-Workspace'** runbook. For parameters and because the _'members'_ and _'categories'_ columns in the requests list are multi values, you will have to use `concat(body('Get_item')?['pnpCategory'])` and `concat(body('Get_item')?['pnpWorkspaceMembers'])` expressions in associated parameters. The `body('Get_item')` expression refers to the name of the step #1. If you changed the name of this action, you will have to update the expression accordingly. Also make sure you wait for the job to finish. | ![Step 3](../images/logicapp_step3.png) |
 | 5 | Get the job status. |  ![Step 4](../images/logicapp_step4.png) |
-| 6 | Set the provisioning status. |  ![Step 2](../images/logicapp_step2.png) |
-| 7 | Create a new condition on the job status value. | ![Step 5](../images/logicapp_step5.png) |
-| 8 | On the `true` branch, get the job output. | ![Step 6](../images/logicapp_step6.png)
-| 9 | On the `true` branch, parse the job output JSON. Use `{ "GroupUrl":""}` as sample payload to generate the schema. | ![Step 7](../images/logicapp_step7.png)
-| 10 | On the `true` branch, update the Office 365 group URL in the request list by updating the SharePoint item. | ![Step 8](../images/logicapp_step8.png)
-| 11 | In any case, update the job status in the request list. | ![Step 9](../images/logicapp_step9.png)
+| 6 | Create a new condition on the job status value. | ![Step 5](../images/logicapp_step5.png) |
+| 7 | On the `true` branch, get the job output. | ![Step 6](../images/logicapp_step6.png)
+| 8 | On the `true` branch, parse the job output JSON. Use `{ "GroupUrl":""}` as sample payload to generate the schema (see note below). | ![Step 7](../images/logicapp_step7.png)
+| 9 | On the `true` branch, update the Office 365 group URL in the request list by updating the SharePoint item. | ![Step 8](../images/logicapp_step8.png)
+| 10 | In any case, update the job status in the request list. | ![Step 9](../images/logicapp_step9.png)
 
 Note: JSON schema for the HTTP trigger
 ```JSON

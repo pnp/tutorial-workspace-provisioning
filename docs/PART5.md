@@ -4,7 +4,7 @@ The part 5 demonstrates how to setup a search experience based on workspaces met
 
 ## PnP Modern Search Configuration - Search for workspaces with taxonomy filters
 
-1. Download the **pnp-modern-search.sppkg** SPFx solution from [here](https://github.com/microsoft-search/pnp-modern-search/releases/tag/v3.7).
+1. Download the **pnp-modern-search.sppkg** SPFx solution from [here](https://github.com/microsoft-search/pnp-modern-search/releases).
 
     ![PnP Modern Search](/images/pnp-modern-search.png)
 
@@ -35,5 +35,4 @@ The part 5 demonstrates how to setup a search experience based on workspaces met
 
 8. Now you have a dedicated search page to browse provisioned Office 365 groups using taxonomy!
 
- 
 > Next part: [Part 6 - Setup Teams Configuration](./PART6.md)
