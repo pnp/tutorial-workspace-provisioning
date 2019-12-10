@@ -26,7 +26,7 @@ In the part 4 we test all the pieces together by running the whole creation proc
 
     ![Item provisioning status Completed](/images/creation_completed.png)
 
-6. By browsing the site you should see the current members for the group. You will notice the owner set in the request is not set as 'Owner' in the group. This is due to the default behavior of groupe creation. Actually, in the provisioning script, the Office 365 group is created under the Azure AD Application identity (due to API limitation). It means **when an Office 365 group is created using the Graph API, the owner corresponds automatically to the identiy of the one perfoming the call** (in this case, the Azure AD application). To specify an other owner, you need to set it manually in a separate operation and this update is not instantaneous and can take few minutes (due to the fact the permissions are synchronized across different services).
+6. By browsing the site you should see the current members for the group. You will notice the owner set in the request is not set as 'Owner' in the group. This is due to the default behavior of group creation. Actually, in the provisioning script, the Office 365 group is created under the Azure AD Application identity. It means **when an Office 365 group is created using the Graph API, the owner corresponds automatically to the identiy of the one perfoming the call** (in this case, the Azure AD application). To specify an other owner, you need to set it manually in a separate operation and this update is not instantaneous and can take few minutes (due to the fact the permissions are synchronized across different services).
 
     ![Group membership](/images/group_membership.png)
 
@@ -62,3 +62,4 @@ Sometimes, issues can occur for dummy reasons (timeout, service unavailable at t
 
     ![Start Flow](/images/start_flow.png)
 
+> Next part: [Part 5 - Setup end-user experience](./PART5.md)

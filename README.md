@@ -1,5 +1,10 @@
 # Tutorial - Create an end-to-end Office 365 groups provisioning solution #
 
+## Authors
+
+- Vincent Biret -[@baywet](https://twitter.com/baywet)
+- Franck Cornu - [@FranckCornu](https://twitter.com/FranckCornu)
+
 ## Why a provisiong solution for Office 365 groups?
 
 This solution was first designed to avoid SharePoint sites sprawling resulting of an uncontrolled Teams deployment inside an organisation. By 'uncontrolled' we mainly refer to Teams containing organisation reference or critical documents without any kind structure or metadata making hard for users to find them outside this specific Teams (data isolation).
@@ -17,6 +22,10 @@ Here are the covered topics during this tutorial:
 - Create and use SharePoint web hooks.
 - Create a SharePoint search experience for created groups.
 
+### Technical architecture
+
+![Architecture](./images/architecture.png)
+
 ## Prerequisites
 
 - A subscription to [Office 365 developer tenant](https://developer.microsoft.com/en-us/office/dev-program)
@@ -26,7 +35,7 @@ Here are the covered topics during this tutorial:
 - Office 365
     - Create term groups and term sets
     - Create site collections
-- [Node.js 10](https://nodejs.org/dist/latest-v10.x/)
+- [Node.js 10](https://nodejs.org/dist/latest-v10.x/) (**not latest**)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Postman](https://www.getpostman.com/)
 - A modern browser (pick one)
@@ -40,7 +49,7 @@ Here are the covered topics during this tutorial:
 - [SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) + [PnP PowerShell for SharePoint Online](https://github.com/SharePoint/PnP-PowerShell/releases)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [Dot Net Core SDK 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) (installer version)
-- (Optional) Azure Functions Core tools 2.X : `npm i -g azure-functions-core-tools@2.X`
+- (Optional) Azure Functions Core tools 2.X : `npm i -g azure-functions-core-tools@2.7.1149`
 
 ## Tutorial steps
 

@@ -12,8 +12,8 @@
     "spWebUrl": "https://aequosdev.sharepoint.com/sites/workspaces",
     "webhookSubscriptionIdentifier": "pnp-workspace-provisioning",
     "webhookNotificationUrl": "http://68f556ec.ngrok.io/api/webhookhandler",
-    "webhookTargetEndpointUrl": "https://prod-14.canadaeast.logic.azure.com:443/workflows/8522bae5fd604377ba2fc99061f97d23/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Ciib3Yd0BE8HXxhNCoxKi7voXazHUn_z6LMXCOTtKic",
-    "azStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=aequosdevo365storage;AccountKey=jSGe2XzvTgoAoHL6xQZBX6s9it2Gg5eohw4g0t3ni19emnQFGz1+alUcp8pu93LRdLFboXaObkvGw9EAGAaF6Q==;EndpointSuffix=core.windows.net",
+    "webhookTargetEndpointUrl": "",
+    "azStorageConnectionString": "",
     "azTableName": "WebhookStateTable"
   },
   "Host": {
