@@ -17,7 +17,7 @@ This tutorial only provides the very minimum building blocks to create a working
 
 Here are the covered topics during this tutorial:
 
-- Use Microsfot Graph and SharePoint APIs to create and configure Office 365 groups.
+- Use Microsoft Graph and SharePoint APIs to create and configure Office 365 groups.
 - Use Azure back end services to run the provisioning logic.
 - Create and use SharePoint web hooks.
 - Create a SharePoint search experience for created groups.
