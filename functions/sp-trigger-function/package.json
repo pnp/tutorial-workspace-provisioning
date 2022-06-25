@@ -36,7 +36,7 @@
     "azure-storage": "^2.10.3",
     "clean-webpack-plugin": "^0.1.19",
     "jest-junit": "^4.0.0",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.7",
     "path": "^0.12.7",
     "sinon": "^5.1.1"
   },
